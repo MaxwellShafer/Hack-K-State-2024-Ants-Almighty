@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2j25u56pjaro"]
+
+[ext_resource type="Texture2D" uid="uid://c6icuvpxfwqqx" path="res://images/Pillbug.png" id="1_wjpdu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ml6n6"]
+radius = 35.0
+height = 148.0
+
+[node name="PillBug" type="Area2D"]
+z_index = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wjpdu")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ml6n6")
+metadata/_edit_group_ = true

@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://cysaiisjbcidn"]
+
+[ext_resource type="Script" path="res://top_back.gd" id="1_j3i1q"]
+[ext_resource type="Script" path="res://top_center.gd" id="2_gfpkm"]
+[ext_resource type="Script" path="res://top_front.gd" id="3_e6w06"]
+[ext_resource type="Texture2D" uid="uid://bjvwgcmt42pvp" path="res://images/DirtPatch.png" id="3_ptaf8"]
+[ext_resource type="Script" path="res://bot_back.gd" id="4_fr4q0"]
+[ext_resource type="Script" path="res://bot_center.gd" id="5_rhsk0"]
+[ext_resource type="Script" path="res://bot_front.gd" id="6_2cu2b"]
+
+[node name="PlayerPositions" type="Node2D"]
+z_index = 1
+metadata/_edit_group_ = true
+
+[node name="TopBack" type="Marker2D" parent="."]
+position = Vector2(-480, -270)
+script = ExtResource("1_j3i1q")
+
+[node name="DirtPatch" type="Sprite2D" parent="TopBack"]
+z_index = 1
+texture = ExtResource("3_ptaf8")
+
+[node name="TopCenter" type="Marker2D" parent="."]
+position = Vector2(-320, -125)
+script = ExtResource("2_gfpkm")
+
+[node name="DirtPatch" type="Sprite2D" parent="TopCenter"]
+z_index = 1
+texture = ExtResource("3_ptaf8")
+
+[node name="TopFront" type="Marker2D" parent="."]
+position = Vector2(-160, -270)
+script = ExtResource("3_e6w06")
+
+[node name="DirtPatch" type="Sprite2D" parent="TopFront"]
+z_index = 1
+texture = ExtResource("3_ptaf8")
+
+[node name="BotBack" type="Marker2D" parent="."]
+position = Vector2(-480, 150)
+script = ExtResource("4_fr4q0")
+
+[node name="DirtPatch" type="Sprite2D" parent="BotBack"]
+z_index = 1
+texture = ExtResource("3_ptaf8")
+
+[node name="BotCenter" type="Marker2D" parent="."]
+position = Vector2(-320, 15)
+script = ExtResource("5_rhsk0")
+
+[node name="DirtPatch" type="Sprite2D" parent="BotCenter"]
+z_index = 1
+texture = ExtResource("3_ptaf8")
+
+[node name="BotFront" type="Marker2D" parent="."]
+position = Vector2(-160, 150)
+script = ExtResource("6_2cu2b")
+
+[node name="DirtPatch" type="Sprite2D" parent="BotFront"]
+z_index = 1
+texture = ExtResource("3_ptaf8")

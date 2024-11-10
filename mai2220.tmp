@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlo8lrsah5uo4"]
+
+[ext_resource type="Texture2D" uid="uid://bqmnwsip1wivt" path="res://images/BaseBackground.png" id="1_axpga"]
+[ext_resource type="Script" path="res://main_2d.gd" id="1_mw017"]
+[ext_resource type="PackedScene" uid="uid://cysaiisjbcidn" path="res://player_positions.tscn" id="5_xxyct"]
+[ext_resource type="PackedScene" uid="uid://bfp58ntipq8dv" path="res://enemy_positions.tscn" id="6_0jpr6"]
+
+[node name="Main2D" type="Node2D"]
+script = ExtResource("1_mw017")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_axpga")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="PlayerPositions" parent="." instance=ExtResource("5_xxyct")]
+
+[node name="EnemyPositions" parent="." instance=ExtResource("6_0jpr6")]

@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://bfp58ntipq8dv"]
+
+[ext_resource type="Script" path="res://enemy_top_back.gd" id="1_v1hgq"]
+[ext_resource type="Script" path="res://enemy_top_center.gd" id="2_p671e"]
+[ext_resource type="Texture2D" uid="uid://bjvwgcmt42pvp" path="res://images/DirtPatch.png" id="2_vo002"]
+[ext_resource type="Script" path="res://enemy_top_front.gd" id="3_mvtya"]
+[ext_resource type="Script" path="res://enemy_bot_back.gd" id="4_sk6c4"]
+[ext_resource type="Script" path="res://enemy_bot_center.gd" id="5_ddggt"]
+[ext_resource type="Script" path="res://enemy_bot_front.gd" id="6_ti4iv"]
+[ext_resource type="PackedScene" uid="uid://b2j25u56pjaro" path="res://pill_bug.tscn" id="8_5nu7o"]
+
+[node name="EnemyPositions" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="TopBack" type="Marker2D" parent="."]
+position = Vector2(480, -270)
+script = ExtResource("1_v1hgq")
+metadata/_edit_group_ = true
+
+[node name="DirtPatch" type="Sprite2D" parent="TopBack"]
+z_index = 1
+texture = ExtResource("2_vo002")
+
+[node name="TopCenter" type="Marker2D" parent="."]
+position = Vector2(320, -125)
+script = ExtResource("2_p671e")
+metadata/_edit_group_ = true
+
+[node name="DirtPatch" type="Sprite2D" parent="TopCenter"]
+z_index = 1
+texture = ExtResource("2_vo002")
+
+[node name="TopFront" type="Marker2D" parent="."]
+position = Vector2(160, -270)
+script = ExtResource("3_mvtya")
+metadata/_edit_group_ = true
+
+[node name="DirtPatch" type="Sprite2D" parent="TopFront"]
+z_index = 1
+texture = ExtResource("2_vo002")
+
+[node name="BotBack" type="Marker2D" parent="."]
+position = Vector2(480, 150)
+script = ExtResource("4_sk6c4")
+metadata/_edit_group_ = true
+
+[node name="DirtPatch" type="Sprite2D" parent="BotBack"]
+z_index = 1
+texture = ExtResource("2_vo002")
+
+[node name="BotCenter" type="Marker2D" parent="."]
+position = Vector2(320, 15)
+script = ExtResource("5_ddggt")
+metadata/_edit_group_ = true
+
+[node name="DirtPatch" type="Sprite2D" parent="BotCenter"]
+z_index = 1
+texture = ExtResource("2_vo002")
+
+[node name="PillBug" parent="BotCenter" instance=ExtResource("8_5nu7o")]
+
+[node name="BotFront" type="Marker2D" parent="."]
+position = Vector2(160, 150)
+script = ExtResource("6_ti4iv")
+metadata/_edit_group_ = true
+
+[node name="DirtPatch" type="Sprite2D" parent="BotFront"]
+z_index = 1
+texture = ExtResource("2_vo002")

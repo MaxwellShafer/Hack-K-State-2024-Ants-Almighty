@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://rentf8jajoia"]
+
+[ext_resource type="Script" path="res://enemy_top_back.gd" id="1_8887m"]
+
+[node name="EnemyPositions" type="Node2D"]
+
+[node name="TopBack" type="Marker2D" parent="."]
+position = Vector2(480, -270)
+script = ExtResource("1_8887m")
+
+[node name="TopCenter" type="Marker2D" parent="."]
+position = Vector2(320, -125)
+
+[node name="TopFront" type="Marker2D" parent="."]
+position = Vector2(160, -270)
+
+[node name="BotBack" type="Marker2D" parent="."]
+position = Vector2(480, 150)
+
+[node name="BotCenter" type="Marker2D" parent="."]
+position = Vector2(320, 15)
+
+[node name="BotFront" type="Marker2D" parent="."]
+position = Vector2(160, 150)
